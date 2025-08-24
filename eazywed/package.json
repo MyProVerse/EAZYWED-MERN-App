@@ -1,7 +1,9 @@
 {
   "name": "eazywed",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "EazyWed - Complete Wedding Services Platform Frontend (Educational Project - Inspired by Shadiyana)",
+  "author": "Ali Zaman (MyProVerse) <alizaman6780@gmail.com>",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -30,6 +32,7 @@
     "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.4.1",
     "react-toastify": "^11.0.5",
+    "recharts": "^2.15.3",
     "zod": "^3.24.2"
   },
   "devDependencies": {

@@ -1,0 +1,36 @@
+#message {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid #dfe4ea;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #1e314b;
+  background: transparent;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+.contact-main{
+  margin-top: 50px;
+}
+.envolop-background {
+  background-size: 70% !important;
+}
+
+.contact-main {
+  padding: 50px 0 !important;
+}
+
+#message:focus,
+#message:active {
+  outline: none;
+  border-bottom: 2px solid #D7385E;
+}
+
+#message::placeholder {
+  color: #999;
+  font-size: 20px;
+  font-style: normal;
+}

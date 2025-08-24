@@ -1,0 +1,18 @@
+
+
+# Node modules
+node_modules/
+backend/node_modules/
+eazywed/node_modules/
+
+# Environment variables
+.env
+backend/.env
+eazywed/.env
+
+# Logs
+*.log
+
+# Build outputs (if any)
+dist/
+build/

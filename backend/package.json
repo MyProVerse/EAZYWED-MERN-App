@@ -1,7 +1,10 @@
 {
-  "name": "backend",
+  "name": "eazywed-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "EazyWed - Complete Wedding Services Platform Backend API (Educational Project - Inspired by Shadiyana)",
+  "main": "server.js",
+  "author": "Ali Zaman (MyProVerse) <alizaman6780@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "start": "node server.js",
@@ -31,6 +34,7 @@
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.3",
     "nodemon": "^3.1.9",
+    "recharts": "^2.15.3",
     "twilio": "^5.4.5"
   }
 }

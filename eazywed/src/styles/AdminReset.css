@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+  
+  .logo-onbaording {
+    width: 38%;
+    background-image: url('/assets/images/onboarding.png');
+    background-size: contain;
+    background-position: center 63%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .logo-onbaording::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    z-index: -1;
+  }
+  
+  .logo {
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    color: #132742;
+  }
+  
+  .sign-in-form {
+    width: 62%;
+    padding: 5% 8%;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #1e314b;
+  }
+  
+  h5 {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #1e314b;
+  }
+  
+  .phone-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .phone-area img {
+    height: 43px;
+    width: 43px;
+  }
+  
+  .phone-area input,
+  label + input {
+    border: none;
+    border-bottom: 2px solid #dfe4ea;
+    width: 100%;
+    padding-left: 5px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1e314b;
+    background: transparent;
+  }
+  
+  .phone-area input:focus,
+  label + input:focus {
+    outline: none;
+    border-bottom: 2px solid #d7385e;
+  }
+  
+  label {
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1e314b;
+    display: block;
+  }
+  
+  .back-forth-buttons {
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .back-button button,
+  .submit--continue-button button {
+    padding: 7px 75px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .back-button button {
+    background-color: #dfe4ea;
+    color: #1e314b;
+  }
+  
+  .back-button button:hover {
+    background-color: #c8d1d9;
+  }
+  
+  .submit--continue-button button {
+    background-color: #d7385e;
+    color: white;
+  }
+  
+  .submit--continue-button button:hover {
+    background-color: #b63050;
+  }
+  
+  .otp-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .otp-modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .otp-modal-content h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e314b;
+    margin-bottom: 15px;
+  }
+  
+  .otp-modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dfe4ea;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  
+  .otp-modal-content button {
+    padding: 7px 30px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .otp-modal-content .verify-button {
+    background-color: #d7385e;
+    color: white;
+  }
+  
+  .otp-modal-content .verify-button:hover {
+    background-color: #b63050;
+  }
+  
+  .otp-modal-content .cancel-button {
+    background-color: #dfe4ea;
+    color: #1e314b;
+    margin-left: 10px;
+  }
+  
+  .otp-modal-content .cancel-button:hover {
+    background-color: #c8d1d9;
+  }
+  
+  @media (max-width: 991px) {
+    .main-container {
+      flex-direction: column;
+    }
+    .logo-onbaording,
+    .sign-in-form {
+      width: 100%;
+      min-height: auto;
+    }
+    .logo-onbaording {
+      height: 400px;
+    }
+    .logo {
+      padding-top: 40px;
+      font-size: 36px;
+    }
+    .sign-in-form {
+      padding: 5%;
+    }
+    .back-forth-buttons {
+      justify-content: center;
+      margin-top: 50px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .logo-onbaording {
+      height: 300px;
+    }
+    .logo {
+      font-size: 28px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+    .phone-area input,
+    label + input {
+      font-size: 14px;
+    }
+    .phone-area img {
+      height: 35px;
+      width: 35px;
+    }
+    .back-button button,
+    .submit--continue-button button {
+      padding: 7px 40px;
+      font-size: 14px;
+    }
+  }

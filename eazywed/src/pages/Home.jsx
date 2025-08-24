@@ -8,7 +8,6 @@ import EstimateSidebar from './common/EstimateSidebar';
 import Footer from './common/Footer';
 import './Home.css';
 import { fetchSliders, fetchDiscountedServices, fetchTrendingSearches, fetchRecommendations } from '../services/api';
-import heroBanner from '../assets/images/hero-banner-home-min.png'; // Import the banner image
 
 const categories = [
   'Recommendations', 'Discounts', 'Wedding Venues', 'Photographers', 'Bridal Makeup', 
@@ -64,11 +63,11 @@ const Home = () => {
       <Navbar />
       <EstimateSidebar />
       <div className="search-services">
-        <div className="banner">
-          <img src={heroBanner} alt="Hero Banner" />
-        </div>
-        <div className="heroHeading">
-          <h1>Plan your <span>Shadi</span> in 3 minutes</h1>
+        <div id="hero-section-20250617" className="hero-section">
+          <div className="hero-content">
+            <h1>Plan your <span>Shadi</span> in 3 minutes</h1>
+            <p>Discover the best wedding vendors and create your dream wedding with ease</p>
+          </div>
         </div>
         <SearchBar onSearch={handleSearch} trendingSearches={trendingSearches} />
         <div className="vendorArea">

@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+.slider-wrapper { width: 100%; padding: 40px 0; position: relative; }
+.container { max-width: 1475px; margin: 0 auto; padding: 0 20px; }
+
+.slider-section { position: relative; padding-bottom: 100px; }
+.slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.slider-title { font-size: 1.5rem; font-weight: 600; }
+.slider-link { font-size: 1rem; text-decoration: none; display: flex; align-items: center; gap: 5px; }
+.slider-link:hover { text-decoration: underline; }
+.slider-nav { display: flex; justify-content: flex-start; margin-bottom: 20px; }
+.slider-nav a { text-decoration: none; font-size: 1rem; padding: 8px 15px; font-weight: 500; border-bottom: 2px solid transparent; margin-right: -2px; transition: color 0.3s; }
+.slider-nav a:last-child { margin-right: 0; }
+.slider-nav a.active { border-bottom-width: 2px; border-bottom-style: solid; }
+.slider-container { width: 100%; height: 340px; overflow: hidden; position: relative; }
+.slider-track { display: flex; gap: 20px; transition: transform 0.5s ease; }
+.slider-card { height: 340px; width: calc((100% - 60px) / 4); border-radius: 8px; display: block; position: relative; flex-shrink: 0; cursor: pointer; }
+.card-image { width: 100%; height: 240px; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px 8px 0 0; }
+.card-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; background: #fff; border-radius: 0 0 8px 8px; }
+.card-title { font-family: 'Poppins', sans-serif; font-weight: 600; color: #0d0d0d; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-size: 1rem; }
+.card-details { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.card-rating { font-size: .875rem; color: #F08A5D; font-weight: 300; display: flex; align-items: center; }
+.card-rating i { margin-right: 3px; }
+.card-location { font-size: .875rem; color: #4a5e7a; font-weight: 300; display: flex; align-items: center; gap: 5px; }
+.card-location i { color: #D7395E; }
+.discount-label { position: absolute; top: 10px; left: 10px; background: #D7395E; color: #fff; padding: 5px 10px; border-radius: 5px; font-size: .75rem; }
+.slider-buttons { display: flex; gap: 10px; position: absolute; bottom: 30px; right: 20px; }
+.slider-btn { display: flex; align-items: center; justify-content: center; background: transparent; height: 7vh; width: 7vh; border-radius: 50%; cursor: pointer; font-size: 1.2rem; }
+
+.slider-light { background: #fff; }
+.slider-light .slider-card { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 0, 0, 0.1); }
+.slider-light .slider-title { color: #0d0d0d; }
+.slider-light .slider-link { color: #D7395E; }
+.slider-light .slider-nav a { color: #1e314b; }
+.slider-light .slider-nav a.active { color: #D7395E; border-bottom-color: #D7395E; }
+.slider-light .slider-nav a:hover { color: #D7395E; }
+.slider-light .slider-btn { border: 1px solid #0d0d0d; color: #0d0d0d; }
+.slider-light .slider-btn:hover { background: rgba(0, 0, 0, 0.1); }
+
+.slider-dark { background: #122642; }
+.slider-dark .slider-card { box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); }
+.slider-dark .slider-title { color: #fff; }
+.slider-dark .slider-link { color: #fff; }
+.slider-dark .slider-nav a { color: #fff; }
+.slider-dark .slider-nav a.active { color: #F08A5D; border-bottom-color: #F08A5D; }
+.slider-dark .slider-nav a:hover { color: #F08A5D; }
+.slider-dark .slider-btn { border: 1px solid #fff; color: #fff; }
+.slider-dark .slider-btn:hover { background: rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 991px) {
+  .slider-card { width: calc((100% - 40px) / 3); }
+  .slider-container { height: 340px; }
+  .slider-buttons { bottom: 25px; right: 10px; }
+}
+
+@media (max-width: 576px) {
+  .slider-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .slider-nav { flex-wrap: wrap; }
+  .slider-card { width: calc(100% - 20px); }
+  .slider-container { height: 340px; }
+  .slider-btn { height: 5vh; width: 5vh; font-size: 1rem; }
+  .slider-buttons { bottom: 20px; }
+}

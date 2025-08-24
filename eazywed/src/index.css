@@ -1,0 +1,478 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F9F9F9;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.logo-onboarding {
+  width: 38%;
+  background-size: contain;
+  background-position: center 63%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo-onboarding::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F9F9F9;
+  z-index: -1;
+}
+
+.logo {
+  padding-top: 80px;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 800;
+  color: #132742;
+}
+
+.sign-in-form {
+  width: 62%;
+  padding: 5% 8%;
+}
+
+.sign-in-form h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #1e314b;
+}
+
+.sign-in-form h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1e314b;
+}
+
+label {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #1e314b;
+  display: block;
+}
+
+.phone-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-area img {
+  height: 43px;
+  width: 43px;
+}
+
+.back-forth-buttons {
+  margin-top: 70px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.otp-modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.otp-modal-content h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e314b;
+  margin-bottom: 15px;
+}
+
+.otp-modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.otp-modal-content .verify-button {
+  background-color: #D7385E;
+  color: white;
+}
+
+.otp-modal-content .verify-button:hover {
+  background-color: #b63050;
+}
+
+.otp-modal-content .cancel-button {
+  background-color: #dfe4ea;
+  color: #1e314b;
+  margin-left: 10px;
+}
+
+.otp-modal-content .cancel-button:hover {
+  background-color: #c8d1d9;
+}
+
+
+.logo-onbaording, .sign-in-form {
+  height: auto;
+  min-height: 100vh;
+}
+
+.logo-onbaording {
+  width: 38%;
+  background-size: contain;
+  background-position: center 63%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo-onbaording::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F9F9F9;
+  z-index: -1;
+}
+
+.phone-area input, .name-area input {
+  border: none;
+  border-bottom: 2px solid #dfe4ea;
+  width: 100%;
+  padding-left: 5px;
+  font-size: 20px;
+  color: #1e314b;
+  background: transparent;
+}
+
+.phone-area input:focus,
+.phone-area input:active,
+.name-area input:focus,
+.name-area input:active {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #D7385E;
+}
+
+.redirect-to-sign-up a, .redirect-to-sign-in a {
+  text-decoration: none;
+  color: #D7385E;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.redirect-to-sign-up a:hover, .redirect-to-sign-in a:hover {
+  color: #b63050;
+}
+
+.submit--continue-button button,
+.back-button button {
+  text-align: center;
+  padding: 7px 75px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit--continue-button button {
+  background-color: #D7385E;
+  color: white;
+}
+
+.submit--continue-button button:hover {
+  background-color: #b63050;
+}
+
+.back-button button {
+  background-color: #dfe4ea;
+  color: #1e314b;
+}
+
+.back-button button:hover {
+  background-color: #c8d1d9;
+}
+
+
+.otp-modal .modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #132742;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+  background: #d7385e;
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #132742;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+
+.main-content {
+  padding: 80px 30px 30px;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #132742;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #d7385e;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #b52e4d;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.summary-card h4 {
+  color: #132742;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  color: #d7385e;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-bar {
+  height: 20px;
+  border-radius: 10px;
+  background: #ddd;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.status-bar div {
+  height: 100%;
+  float: left;
+}
+
+.status-pending {
+  background: #f08a5d;
+}
+
+.status-confirmed {
+  background: #28a745;
+}
+
+.status-completed {
+  background: #007bff;
+}
+
+
+@media (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+    min-height: auto;
+    padding: 0;
+  }
+  .logo-onbaording, .sign-in-form {
+    width: 100%;
+    min-height: auto;
+  }
+  .logo-onbaording {
+    height: 400px;
+    background-position: center;
+    padding-bottom: 20px;
+  }
+  .logo {
+    padding-top: 40px;
+    font-size: 36px;
+  }
+  .sign-in-form {
+    padding: 5% 5%;
+    margin-top: 0;
+  }
+  .phone-area, .name-area {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .phone-area input, .name-area input {
+    font-size: 16px;
+  }
+  .back-forth-buttons {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+  }
+  .submit--continue-button button, .back-button button {
+    padding: 7px 50px;
+    font-size: 14px;
+  }
+  .redirect-to-sign-up a, .redirect-to-sign-in a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    left: 0;
+  }
+  .main-content {
+    margin-left: 250px;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-onbaording {
+    height: 300px;
+    background-size: 90% !important;
+  }
+  .logo {
+    padding-top: 30px;
+    font-size: 28px;
+  }
+  .sign-in-form h4 {
+    font-size: 18px;
+  }
+  .sign-in-form h5 {
+    font-size: 16px;
+  }
+  label {
+    font-size: 16px;
+  }
+  .phone-area input, .name-area input {
+    font-size: 14px;
+  }
+  .phone-area img {
+    height: 35px;
+    width: 35px;
+  }
+  .submit--continue-button button, .back-button button {
+    padding: 7px 40px;
+    font-size: 14px;
+  }
+  .redirect-to-sign-up a, .redirect-to-sign-in a {
+    font-size: 14px;
+  }
+}
+
+

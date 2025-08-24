@@ -1,0 +1,226 @@
+.navbar {
+  background-color: #F9F9F9;
+  padding: 100px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #132742 !important;
+  padding-left: 10px;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  color: #1e314b !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #132743 !important;
+  font-weight: 700;
+}
+
+.navbar-nav.menu-links {
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: absolute;
+  z-index: 1000;
+}
+
+.navbar-nav .dropdown.show .dropdown-menu,
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  font-family: 'Poppins', sans-serif;
+  color: #1e314b !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 20px;
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #F5F7FA !important;
+  color: #132743 !important;
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.icon-1 { background-color: #DEE2E8; color: #132743; }
+.icon-2 { background-color: #F2E3EA; color: #D7385E; }
+.icon-3 { background-color: #F5ECEA; color: #F08A5D; }
+
+.list-business-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #d7385e;
+  background: #fff;
+  border: 1px solid #d7385e;
+  border-radius: 50px;
+  padding: 6px 17px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.list-business-btn:hover {
+  background-color: #d7385e !important;
+  color: #ffffff !important;
+}
+
+.icon-link {
+  font-family: 'Poppins', sans-serif;
+  color: #d7385e !important;
+  font-size: 20px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.user-dropdown .nav-link {
+  color: #d7385e !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-toggle-chevron {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown.show .dropdown-toggle-chevron,
+.dropdown-toggle-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.user-dropdown .dropdown-toggle::after,
+.dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #F9F9F9;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav.menu-links { padding: 15px; border-bottom: 2px solid #ddd; }
+  .nav-link { padding: 10px 20px !important; }
+  .list-business-btn-desktop, .search-desktop, .ai-desktop, .estimate-desktop { display: none; }
+  .list-business-btn-mobile, .search-mobile, .ai-mobile, .estimate-mobile { display: block; }
+  .header-container { flex-wrap: nowrap; justify-content: space-between; }
+  .navbar-left { flex: 1; justify-content: flex-start; }
+  .navbar-toggler { flex: 0 0 auto; margin-left: auto; }
+  .navbar-nav .dropdown-menu {
+      position: absolute !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .list-business-btn-mobile, .search-mobile, .ai-mobile, .estimate-mobile { display: none; }
+  .list-business-btn-desktop, .search-desktop, .ai-desktop, .estimate-desktop { display: inline-flex; }
+}
+
+@media (max-width: 767px) {
+  .header-container { padding: 0 10px; }
+}
+
+/* Search Modal Styles */
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.search-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}

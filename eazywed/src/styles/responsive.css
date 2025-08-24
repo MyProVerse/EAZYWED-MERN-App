@@ -1,0 +1,117 @@
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Dashboard */
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  /* Forms */
+  .service-form-card,
+  .card-form-wrapper {
+    width: 95% !important;
+    padding: 15px !important;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  /* Card Editor */
+  .properties-panel {
+    width: 250px;
+  }
+
+  .layer-controls {
+    right: 10px;
+  }
+
+  /* Auth Pages */
+  .main-container {
+    flex-direction: column;
+  }
+
+  .logo-onboarding {
+    height: 150px !important;
+    width: 100% !important;
+  }
+
+  .sign-in-form {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  /* Card Editor */
+  .properties-panel {
+    width: 250px;
+  }
+}
+
+/* Loading Component */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #d7385e;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #d7385e;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

@@ -1,0 +1,345 @@
+/* src/styles/custom.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+  
+  .logo-onbaording,
+  .sign-in-form {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .logo-onbaording {
+    width: 38%;
+    background-image: url('/assets/images/onboarding.png');
+    background-size: contain;
+    background-position: center 63%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .logo-onbaording::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    z-index: -1;
+  }
+  
+  .logo {
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    color: #132742;
+  }
+  
+  .sign-in-form {
+    width: 62%;
+    padding: 5% 8%;
+  }
+  
+  .sign-in-form h4 {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #1e314b;
+  }
+  
+  .sign-in-form h5 {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #1e314b;
+  }
+  
+  label {
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1e314b;
+    display: block;
+  }
+  
+  .phone-area,
+  .name-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .phone-area img {
+    height: 43px;
+    width: 43px;
+  }
+  
+  .phone-area input,
+  .name-area input {
+    border: none;
+    border-bottom: 2px solid #dfe4ea;
+    width: 100%;
+    padding-left: 5px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1e314b;
+    background: transparent;
+  }
+  
+  .phone-area input:focus,
+  .phone-area input:active,
+  .name-area input:focus,
+  .name-area input:active {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d7385e;
+  }
+  
+  .redirect-to-sign-up a,
+  .redirect-to-sign-in a {
+    text-decoration: none;
+    color: #d7385e;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .redirect-to-sign-up a:hover,
+  .redirect-to-sign-in a:hover {
+    color: #b63050;
+  }
+  
+  .back-forth-buttons {
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .submit--continue-button button,
+  .back-button button {
+    text-align: center;
+    padding: 7px 75px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .submit--continue-button button {
+    background-color: #d7385e;
+    color: white;
+  }
+  
+  .submit--continue-button button:hover {
+    background-color: #b63050;
+  }
+  
+  .back-button button {
+    background-color: #dfe4ea;
+    color: #1e314b;
+  }
+  
+  .back-button button:hover {
+    background-color: #c8d1d9;
+  }
+  
+  /* OTP Modal Styling */
+  .otp-modal.show {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .otp-modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .otp-modal-content h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e314b;
+    margin-bottom: 15px;
+  }
+  
+  .otp-modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dfe4ea;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  
+  .otp-modal-content button {
+    padding: 7px 30px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .otp-modal-content .verify-button {
+    background-color: #d7385e;
+    color: white;
+  }
+  
+  .otp-modal-content .verify-button:hover {
+    background-color: #b63050;
+  }
+  
+  .otp-modal-content .cancel-button {
+    background-color: #dfe4ea;
+    color: #1e314b;
+    margin-left: 10px;
+  }
+  
+  .otp-modal-content .cancel-button:hover {
+    background-color: #c8d1d9;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .main-container {
+      flex-direction: column;
+      min-height: auto;
+      padding: 0;
+    }
+  
+    .logo-onbaording,
+    .sign-in-form {
+      width: 100%;
+      min-height: auto;
+    }
+  
+    .logo-onbaording {
+      height: 400px;
+      background-position: center;
+      padding-bottom: 20px;
+    }
+  
+    .logo-onbaording::before {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .logo {
+      padding-top: 40px;
+      font-size: 36px;
+    }
+  
+    .sign-in-form {
+      padding: 5% 5%;
+      margin-top: 0;
+    }
+  
+    .phone-area,
+    .name-area {
+      flex-direction: row;
+      gap: 10px;
+    }
+  
+    .phone-area input,
+    .name-area input {
+      font-size: 16px;
+    }
+  
+    .back-forth-buttons {
+      justify-content: center;
+      gap: 15px;
+      margin-top: 50px;
+    }
+  
+    .submit--continue-button button,
+    .back-button button {
+      padding: 7px 50px;
+      font-size: 14px;
+    }
+  
+    .redirect-to-sign-up a,
+    .redirect-to-sign-in a {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .logo-onbaording {
+      height: 300px;
+      background-size: 90%;
+    }
+  
+    .logo {
+      padding-top: 30px;
+      font-size: 28px;
+    }
+  
+    .sign-in-form h4 {
+      font-size: 18px;
+    }
+  
+    .sign-in-form h5 {
+      font-size: 16px;
+    }
+  
+    label {
+      font-size: 16px;
+    }
+  
+    .phone-area input,
+    .name-area input {
+      font-size: 14px;
+    }
+  
+    .phone-area img {
+      height: 35px;
+      width: 35px;
+    }
+  
+    .submit--continue-button button,
+    .back-button button {
+      padding: 7px 40px;
+      font-size: 14px;
+    }
+  
+    .redirect-to-sign-up a,
+    .redirect-to-sign-in a {
+      font-size: 14px;
+    }
+  }

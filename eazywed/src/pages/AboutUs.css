@@ -1,0 +1,273 @@
+.about-us-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-color: #F9F9F9;
+  padding: 250px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+  border:#e94057 2px solid;
+  margin-top: 72px;
+
+}
+
+
+/* .hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ffeef1;
+  border-radius: 0 0 0 100px;
+  z-index: 0;
+} */
+
+.hero-content {
+  width: 50%;
+  padding-left: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title-dark {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.hero-title-pink {
+  color: #e94057;
+  font-weight: 600;
+}
+
+/* .hero-image {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+} */
+
+.hero-image img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+/* Tagline Section */
+.tagline-section {
+  text-align: center;
+  padding: 40px 15%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+  display: flex;
+  padding: 60px 10%;
+  gap: 40px;
+  align-items: center;
+}
+
+.who-we-are-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #e94057;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.who-we-are-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.who-we-are-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.image-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.who-are-we-image {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Business Section */
+.business-section {
+  display: flex;
+  padding: 60px 10%;
+  gap: 40px;
+  align-items: center;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+/* .business-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #e94057;
+  opacity: 0.7;
+  border-radius: 0 100% 0 0;
+} */
+
+.business-image {
+  flex: 1;
+}
+
+.business-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.business-content {
+  flex: 1;
+}
+
+.vendor-cards-container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.vendor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.vendor-card:hover {
+  transform: translateY(-5px);
+}
+
+.vendor-card i {
+  font-size: 1.5rem;
+  color: #e94057;
+  margin-bottom: 10px;
+}
+
+.vendor-card span {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-section{
+    margin-top: 76px;
+  }
+
+  .who-we-are-section,
+  .business-section {
+    flex-direction: column;
+  }
+
+  .who-we-are-images {
+    margin-top: 30px;
+  }
+
+  .vendor-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  .hero-section::before {
+    width: 100%;
+    height: 60%;
+    border-radius: 0;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .tagline-section {
+    padding: 30px 5%;
+  }
+
+  .who-we-are-section,
+  .business-section {
+    padding: 40px 5%;
+  }
+
+  .who-are-we-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .who-are-we-image {
+    width: 100%;
+  }
+
+  .vendor-cards-container {
+    grid-template-columns: 1fr;
+  }
+}

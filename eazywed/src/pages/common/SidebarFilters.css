@@ -1,0 +1,42 @@
+.sidebar {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+}
+
+.filter-section {
+  border-bottom: 1px solid #b1b5b6;
+  padding: 15px 0;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+}
+
+.filter-title {
+  width: 100%;
+  color: #3f464b;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.form-check-input {
+  accent-color: #d7395e;
+}
+
+.form-check-label {
+  color: #3f464b;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  white-space: pre;
+}
